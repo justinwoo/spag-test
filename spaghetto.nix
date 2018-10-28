@@ -6,8 +6,8 @@ pkgs.stdenv.mkDerivation rec {
   src = pkgs.fetchFromGitHub {
     owner = "justinwoo";
     repo = "spaghetto";
-    rev = "0ef340f9f21837736c11c7e174ad22df3d4eae6f";
-    sha256 = "1hmgm9ff664263cxa07r8yfavd234wd7d8yzpgj3zhr8xzc37rl6";
+    rev = "93796206c2e4edac05639611b02f7a9c52086d9f";
+    sha256 = "17ma283y7d7s6v2x437hn7cawy47sca0f6dz6lx0ryjzfhs7hasz";
   };
 
   installPhase = ''
