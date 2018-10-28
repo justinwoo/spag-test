@@ -6,6 +6,8 @@ If you have Nix installed, you can run `make nix` to see this in action.
 
 ## SHA
 
+*Update: it seems there are very few commits you can even fetch from GitHub by using SHAs, so what is below is definitely not recommended:*
+
 Spaghetto will also let you use a commit SHA for a ref:
 
 ```hs
