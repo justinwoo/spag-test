@@ -15,4 +15,12 @@ in pkgs.stdenv.mkDerivation {
   src = ./.;
 
   buildInputs = [spaghetto] ++ easy-ps.buildInputs;
+
+  shellHook = ''
+    cp --no-preserve=mode,ownership,timestamp ${spaghetto.outPath}/bin/templates/* .
+    mkdir -p src
+    mv srcMain.purs src/Main.purs
+    mkdir -p test
+    mv testMain.purs test/Main.purs
+  '';
 }

@@ -1,7 +1,6 @@
 default: build run
 
 build:
-	spacchetti-init
 	spacchetti-install
 	spacchetti-sources
 	spacchetti-build
