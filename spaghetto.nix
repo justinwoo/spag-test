@@ -1,4 +1,6 @@
-{ pkgs ? import <nixpkgs> {} }:
+{ pkgs ? import <nixpkgs> {}
+, pwd ? builtins.toString ./.
+}:
 
 pkgs.stdenv.mkDerivation rec {
   name = "spaghetto";
@@ -14,5 +16,10 @@ pkgs.stdenv.mkDerivation rec {
     mkdir -p $out/bin
     cp spacchetti-* $out/bin
     cp -r templates $out/bin/templates
+    cp --no-preserve=mode,ownership,timestamp templates/* ${pwd}
+    mkdir -p ${pwd}/src
+    mkdir -p ${pwd}/test
+    mv ${pwd}/srcMain.purs ${pwd}/src/Main.purs
+    mv ${pwd}/testMain.purs ${pwd}/test/Main.purs
   '';
 }
